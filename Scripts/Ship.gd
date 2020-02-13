@@ -4,5 +4,17 @@ extends KinematicBody2D
 func _ready():
 	pass
 
-func _physics_process(delta):
-	pass
+func _physics_process(_delta):
+	if Input.is_action_pressed("left"):
+		position.x = position.x - 10
+		
+	if Input.is_action_pressed("right"):
+		position.x = position.x + 10
+		
+	if Input.is_action_pressed("down"):
+		position.x = position.x - 10
+		position.y = position.y + 10
+		
+	if Input.is_action_pressed("up"):
+		position.x = position.x + 10
+		position.y = position.y - 10
